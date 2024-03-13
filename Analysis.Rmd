@@ -7,6 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = TRUE)
+# install.packages('NHSRdatasets')
 ```
 
 # Load libraries
@@ -31,7 +32,7 @@ data(LOS_model)
 ```{r}
 LOS_model %>%
   ggplot() +
-  geom_histogram(aes(x=Age), fill = 'lightgrey', color = 'black',
+  geom_histogram(aes(x=Age), fill = 'royalblue', color = 'black',
                  breaks = seq(0, 100, by=5)) +
   scale_x_continuous(breaks = seq(0, 100, by=5))
 ```
